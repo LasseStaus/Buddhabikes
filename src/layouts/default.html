@@ -1,0 +1,246 @@
+{{!-- This is the base layout for your project, and will be used on every page unless specified. --}}
+
+<!DOCTYPE html>
+<html class="no-js" lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png" />
+    <link rel="manifest" href="assets/img/fav/site.webmanifest" />
+    <link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>Buddha Bikes</title>
+
+    <meta name="description" content="Buddha Bikes laver billige bæredygtige cykler fra genbrugsmateriale. Vi svejser billige og bæredygtige cykler sammen udelukkende fra genbrug og til en billig pris.  " />
+    <meta name="keywords" content="Genbrug, Brugte, Cykler, Bæredygtighed, Svejsning, København. billig, garanti" />
+    <meta name="author" content="Buddha Bikes" />
+
+    <link rel="stylesheet" href="{{root}}assets/css/app.css" />
+
+    <link rel="stylesheet" href="https://use.typekit.net/dbo2vap.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header__top header-img">
+        <div class="bg">
+          <a href="index.html"><img src="assets/img/logo.png" class="logo" alt="Buddha Bikes logo" /></a>
+
+          <div class="grid-container grid-container--wide menu-container">
+            <div class="grid-x">
+              <div class="cell medium-6 flex-container align-middle align-left">
+                <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/buddhabikes"><i class="fab fa-instagram"></i></a>
+
+                <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-youtube"></i></a>
+              </div>
+              <div class="cell medium-6 show-for-large">
+                <nav class="service-nav">
+                  <div class="service-nav__desktop-menu">
+                    <ul class="dropdown menu flex-container align-middle align-right" data-dropdown-menu>
+                      <li><a class="testclass" href="products.html">Cykler</a></li>
+                      <li>
+                        <a href="specials.html">Specials</a>
+                        <ul class="menu">
+                          <li><a href="specials.html#KJ">Special projects</a></li>
+                          <li><a href="specials.html#KJ">Originals</a></li>
+                          <li><a href="specials.html#originals">Korte Jan</a></li>
+                          <li><a href="specials.html#ladcykel">Ladcykel</a></li>
+                          <li><a href="specials.html#mtb">Mountainbike</a></li>
+                          <li><a href="specials.html#s-intro">Idéen bag specials</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="services.html">Services</a>
+                        <ul class="menu">
+                          <li><a href="services.html">Vores services</a></li>
+                          <li><a href="services.html#service-intro">Værkstedet</a></li>
+                          <li><a href="services.html#guarantee">Garanti & Reklamation</a></li>
+                          <li><a href="services.html#buyback">Buyback</a></li>
+                          <li><a href="services.html#shopping-guide">Købsguide</a></li>
+                          <li><a href="services.html#size-guide">Størrelses Guide</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="about.html">Om</a>
+                        <ul class="menu">
+                          <li><a href="about.html">Alt om Buddha Bikes</a></li>
+                          <li><a href="about.html#service-intro">Miljøregnskab</a></li>
+                          <li><a href="about.html#bike-source">Bæredygtighed</a></li>
+                          <li><a href="about.html#socialeco">Socialøkonomi</a></li>
+                          <li><a href="employees.html">Medarbejdere</a></li>
+                          <li><a href="about.html#internship-and-job">Job i Buddha Bikes</a></li>
+                          <li><a href="partners.html">Samarbejde</a></li>
+                        </ul>
+                      </li>
+
+                      <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <button class="button hide-for-large menu__toggler" data-toggle="offCanvas">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="header__bottom bg">
+        <div class="bg">
+          <marquee class="news-scroll" behavior="scroll" direction="left" scrollamount="10">
+            <span href="#">Budhha Bikes - ALT I BRUGTE CYKLER </span>
+            <span class="dot"></span>
+            <span href="#">Cykler i alle prisklasser <i class="fas fa-check"></i> </span>
+            <span class="dot"></span>
+            <span href="#">Custom projekter <i class="fas fa-check"></i> </span>
+            <span class="dot"></span>
+
+            <span href="#">Lånecykler <i class="fas fa-check"></i> </span>
+            <span class="dot"></span>
+            <span href="#">Garanti som på ny cykel <i class="fas fa-check"></i> </span>
+            <span class="dot"></span>
+            <span href="#">Miljøbevidste produkter <i class="fas fa-check"></i> </span>
+            <span class="dot"></span>
+            <span href="#">Praktik muligheder <i class="fas fa-check"></i> </span>
+            <span class="dot"></span>
+            <span href="#">Genbrugsaktivister <i class="fas fa-check"></i> </span>
+            <span class="dot"></span>
+          </marquee>
+        </div>
+      </div>
+
+      <div class="cell large-12 header__banner show-for-large"></div>
+    </header>
+
+    <main class="main-container">
+      <div class="off-canvas-wrapper">
+        <div class="off-canvas-content" data-off-canvas-content>
+          {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}} {{> body}}
+
+          <footer>
+            <div class="grid-container">
+              <div class="footer_header text-center">
+                <img src="assets/img/RSV.png" class="text-center" alt="Socialøkonomisk Logo" />
+                <h2>Socialøkonomisk virksomhed</h2>
+              </div>
+              <div class="grid-x grid-margin-x grid-padding-x grid-padding-y">
+                <div class="medium-3 cell info-icons">
+                  <p class="">Buddha Bikes laver alle former for cykler, og hvis vi har ikke har det du søger på lager nu, kan vi lave det specielt til dig. Alle produkter er lavet af genbrugsmateriale til skarpe priser.</p>
+                  <a href="https://g.page/Buddhabikes?share">
+                    <i class="fas fa-map-marker-alt"></i> Emblasgade 175<br />
+                    2100 København<br />Danmark
+                  </a>
+                  <a href="mailto:info@buddhabikes.dk"><i class="fas fa-envelope"></i> info@buddhabikes.dk </a>
+                  <a href="tel:+4528155925"><i class="fas fa-phone"></i> Phone: (+45) 38 86 43 25</a>
+                </div>
+                <div class="medium-3 cell">
+                  <h4>Information</h4>
+                  <a href="products.html">Cykler</a>
+                  <a href="about.html#job">Job & Praktik</a>
+                  <a href="about.html">Om Buddha Bikes</a>
+                  <a href="about.html">Miljøregnskab</a>
+                  <a href="services.html#guarantee">Reklemation & Garanti</a>
+
+                  <a href="services.html#buyback">Buyback & Tilbud</a>
+                </div>
+
+                <div class="medium-3 cell">
+                  <h4>Følg med</h4>
+                  <a href="https://www.facebook.com/BuddhabikesCPH/"> <i class="fab fa-facebook"></i>Facebook</a>
+                  <a href="https://www.instagram.com/buddhabikes/"> <i class="fab fa-instagram"></i>Instagram</a>
+                  <a href="contact.html"> <i class="far fa-calendar-alt"></i> Events</a>
+                </div>
+                <div class="medium-3 cell">
+                  <h4>Kontakt os</h4>
+                  <a href="contact.html">Kontakt</a>
+                  <a href="https://g.page/Buddhabikes?share">Find os</a>
+                  <a href="contact.html">Åbningstider</a>
+                  <a href="https://www.facebook.com/BuddhabikesCPH/l">Events</a>
+                </div>
+              </div>
+            </div>
+            <p class="copyright text-muted text-center">Buddha Bikes er en del af socialøkonomisk cykelkompagni APS</p>
+            <p class="text-center">©Copyright 2020 Juanna-D Productions</p>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas data-trap-focus="true" data-content-scroll="false" data-transition="overlap">
+      <div class="mobile-panel">
+        <div class="mobile-nav">
+          <nav aria-label="You are here:">
+            <ul class="vertical menu drilldown" data-drilldown data-auto-height="true" data-animate-height>
+              <li>
+                <a href="index.html">Forside </a>
+              </li>
+              <li>
+                <a href="products.html">Cykel katalog </a>
+              </li>
+              <li>
+                <a href="specials.html">Special projects </a>
+                <ul class="menu vertical nested">
+                  <li><a href="specials.html#KJ">Special projects</a></li>
+                  <li><a href="specials.html#KJ">Originals</a></li>
+                  <li><a href="specials.html#originals">Korte Jan</a></li>
+                  <li><a href="specials.html#ladcykel">Ladcykel</a></li>
+                  <li><a href="specials.html#mtb">Mountainbike</a></li>
+                  <li><a href="specials.html#s-intro">Idéen bag specials</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="services.html">Services </a>
+                <ul class="menu vertical nested">
+                  <li><a href="services.html">Vores services</a></li>
+                  <li><a href="services.html#service-intro">Værkstedet</a></li>
+                  <li><a href="services.html#guarantee">Garanti & Reklamation</a></li>
+                  <li><a href="services.html#buyback">Buyback</a></li>
+                  <li><a href="services.html#shopping-guide">Købsguide</a></li>
+                  <li><a href="services.html#size-guide">Størrelses Guide</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="about.html">Læs om Buddha Bikes </a>
+                <ul class="menu vertical nested">
+                  <li><a href="about.html">Alt om Buddha Bikes</a></li>
+                  <li><a href="about.html#service-intro">Miljøregnskab</a></li>
+                  <li><a href="about.html#bike-source">Bæredygtighed</a></li>
+                  <li><a href="about.html#socialeco">Socialøkonomi</a></li>
+                  <li><a href="employees.html">Medarbejdere</a></li>
+                  <li><a href="about.html#internship-and-job">Job i Buddha Bikes</a></li>
+                  <li><a href="partners.html">Samarbejde</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="contact.html">Kontakt os </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hide-for-large top-links flex-container">
+          <a href="mailto:buddhabikes@info.dk"><i class="fas fa-envelope"></i>Mail os</a>
+          <a href="tel:+4528155925"><i class="fas fa-phone-alt"></i>Ring til os</a>
+          <a href="https://g.page/Buddhabikes?share"><i class="fas fa-map-marker-alt"></i>Find os</a>
+        </div>
+        <div class="medium-6 hide-for-large nav-links bottom-links align-justify flex-container">
+          <a href="https://www.facebook.com/BuddhabikesCPH/" class="button"><i class="fab fa-facebook"></i>Facebook</a>
+          <a href="https://www.instagram.com/buddhabikes/" class="button"><i class="fab fa-instagram"></i>Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

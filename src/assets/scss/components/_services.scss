@@ -1,0 +1,150 @@
+@import "mixins";
+#service-intro {
+  min-height: auto;
+  h2.h1 {
+    font-weight: bold;
+    @include redHeader;
+  }
+  span.h4 {
+    font-weight: bold;
+  }
+  .image-container {
+    position: relative;
+
+    min-height: 300px;
+    img {
+      min-height: 200px;
+      max-height: 200px;
+      width: auto;
+      position: absolute;
+      z-index: 1;
+
+      @include breakpoint(medium down) {
+        min-height: none;
+        max-height: none;
+        position: relative;
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+      &:nth-child(2) {
+        bottom: 0;
+        right: 0;
+      }
+      &:nth-child(3) {
+        top: 25%;
+        left: 25%;
+      }
+
+      &:first-child {
+        top: 0;
+        left: 0;
+      }
+
+      &:hover {
+        z-index: 3;
+      }
+    }
+  }
+}
+#landing-service {
+  background-image: url("../img/frontpage/bgBike.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+#service-repair {
+  min-height: auto;
+  .manchet {
+    font-weight: bold;
+    margin-bottom: rem-calc(15);
+  }
+  h4,
+  span.h4 {
+    font-weight: bold;
+    color: $blue;
+  }
+
+  .banner-pic {
+    min-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    @include breakpoint(medium down) {
+      min-width: auto;
+    }
+    div {
+      background-image: url(../img/bannerpic.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      min-height: 500px;
+      width: 100%;
+      margin-bottom: rem-calc(50);
+
+      @include breakpoint(medium down) {
+        background-position: center;
+        background-size: cover;
+        min-height: 200px;
+      }
+    }
+  }
+}
+
+#guarantee {
+  h2.h1 {
+    @include redHeader;
+  }
+  h4.h3 {
+    font-weight: bold;
+    color: $blue;
+  }
+  .gs {
+    li {
+      list-style: disc;
+      margin-bottom: rem-calc(10);
+      span {
+        font-weight: bold;
+        color: $blue;
+      }
+      @include breakpoint(small only) {
+        list-style: inside;
+      }
+    }
+  }
+}
+
+#shopping-guide,
+#size-guide {
+  h2.h1 {
+    color: $red;
+    font-weight: bold;
+    margin-bottom: rem-calc(50);
+    text-align: center;
+    border-bottom: 1px solid $red;
+  }
+  h4.h3 {
+    font-weight: bold;
+    color: $blue;
+    border-bottom: 1px solid $blue;
+  }
+  .cell {
+    margin-bottom: rem-calc(30);
+  }
+  li {
+    list-style: inside;
+    margin-bottom: rem-calc(10);
+
+    @include breakpoint(small only) {
+      list-style: inside;
+    }
+  }
+  span {
+    font-weight: bold;
+    color: $blue;
+  }
+}

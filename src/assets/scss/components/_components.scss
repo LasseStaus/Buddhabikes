@@ -1,0 +1,145 @@
+/// <reference path="../../../node_modules/foundation-sites/scss/foundation.scss" />
+/// <reference path="../settings/_settings.scss" />
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+}
+.components {
+  .component {
+    margin: rem-calc(40 0);
+
+    @include breakpoint(medium only) {
+      margin: rem-calc(50 0);
+    }
+
+    @include breakpoint(large up) {
+      margin: rem-calc(60 0);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    /*&:last-child {
+            margin-bottom: 0;
+        }*/
+  }
+}
+
+body {
+  min-height: 100vh;
+  max-height: 100vh;
+  scroll-behavior: smooth;
+}
+body {
+  background: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3000;
+}
+.main-container {
+  margin-top: 12vh;
+  position: fixed;
+  min-height: calc(100vh - 12vh);
+  bottom: 0;
+
+  @include breakpoint(medium down) {
+    min-height: calc(100vh - 8vh);
+  }
+  top: 0;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100%;
+
+  @include breakpoint(medium down) {
+    margin-top: 8vh;
+  }
+  .grid-container {
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+section {
+  scroll-snap-align: -130px;
+  .banner-pic {
+  }
+
+  &#intro {
+    padding: 0;
+    margin: 0;
+  }
+}
+section:last-child {
+  padding-bottom: rem-calc(50);
+}
+#landing,
+#intro {
+  min-height: calc(100vh - #{$total-header});
+}
+section:first-child {
+  min-height: calc(100vh - #{$total-header} + 2vh);
+  margin-top: 0;
+}
+
+section:first-child {
+  padding-top: 0;
+}
+
+section#products-intro {
+  padding-top: 3vh;
+  @include breakpoint(medium down) {
+    padding-top: 0px;
+  }
+}
+
+.wide-components {
+  .component {
+    margin: rem-calc(40 0);
+
+    @include breakpoint(medium only) {
+      margin: rem-calc(50 0);
+    }
+
+    @include breakpoint(large up) {
+      margin: rem-calc(60 0);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.bg-color,
+    &.bg-gradient {
+      margin: 0;
+      padding: rem-calc(40 0);
+
+      @include breakpoint(medium only) {
+        padding: rem-calc(50 0);
+      }
+
+      @include breakpoint(large up) {
+        padding: rem-calc(60 0);
+      }
+    }
+  }
+}
+
+main .component:last-child {
+  margin-bottom: 0;
+}
+
+body section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body section:first-child {
+}

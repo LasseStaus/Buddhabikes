@@ -1,0 +1,55 @@
+#contact_section {
+  padding-top: 3vh;
+  #mail-section {
+    align-self: flex-start;
+  }
+  position: relative;
+
+  .h4 {
+    padding-bottom: rem-calc(5);
+    margin-bottom: rem-calc(15);
+    font-weight: bold;
+    color: $blue;
+  }
+  i {
+    color: $blue;
+  }
+  p.spg {
+    font-weight: bold;
+  }
+  .sidebar {
+    .h4 {
+      border-bottom: 1px solid $blue;
+      padding-bottom: rem-calc(5);
+      margin-bottom: rem-calc(15);
+      font-weight: bold;
+      color: $blue;
+    }
+    p,
+    a {
+      margin: 0;
+      margin-bottom: rem-calc(8);
+    }
+  }
+  iframe {
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    paddingw-bottom: 3vh;
+  }
+  .info-icons {
+    margin-bottom: rem-calc(40);
+
+    p,
+    a {
+      display: block;
+      margin: 0;
+      margin-bottom: rem-calc(8);
+    }
+  }
+
+  form button {
+    background: $blue;
+    font-size: rem-calc(16);
+  }
+}

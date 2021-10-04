@@ -1,0 +1,512 @@
+$header-top-h: 8vh;
+$header-bot-h: 4vh;
+$header-banner: rem-calc(0);
+$overflow: 2vh;
+$total-header: calc(#{$header-top-h} + #{$header-bot-h} + #{$overflow});
+
+.header__bottom {
+  background: $blue;
+
+  width: 100%;
+  /*  div.bg {
+    @include breakpoint(large up) {
+      background-image: url(../img/frontpage/ChainWhite.png);
+      background-repeat: repeat-x;
+      max-height: $header-top-h;
+      height: 8vh;
+      background-position: bottom;
+      background-size: contain;
+
+      min-width: rem-cal(200);
+    }
+  } */
+}
+.header-img {
+  position: relative;
+  width: 100%;
+}
+
+.header__top {
+  height: $header-top-h;
+  background: rgb(168, 168, 168);
+
+  background: $black;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  div.bg {
+    @include breakpoint(large up) {
+      background-image: url(../img/frontpage/ChainWhite.png);
+      background-repeat: repeat-x;
+      max-height: $header-top-h;
+      height: 8vh;
+      background-position: bottom;
+      background-size: contain;
+
+      min-width: rem-cal(200);
+    }
+  }
+
+  @include breakpoint(medium down) {
+    background: $blue;
+    background-image: url(../img/frontpage/ChainWhite.png);
+    background-repeat: repeat-x;
+    max-height: $header-top-h;
+    height: 8vh;
+    background-position: 79%;
+    background-size: cover;
+
+    min-width: rem-calc(200);
+  }
+  .menu-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    i {
+      margin-right: rem-calc(10);
+      font-size: rem-calc(16);
+      color: $white;
+    }
+    .grid-x {
+      width: 100%;
+    }
+    .service-nav__desktop-menu {
+      li {
+        a {
+          color: $white;
+          font-weight: bold;
+          font-size: rem-calc(16);
+          text-shadow: 1px 0px 1px $white;
+          &:after {
+            border-color: $white transparent transparent;
+          }
+
+          ul a {
+            color: $white;
+          }
+        }
+      }
+
+      .is-dropdown-submenu {
+        min-width: 250px;
+        a {
+          padding: 1.2rem 1rem;
+          width: 100%;
+          background: $white;
+          color: $black;
+          transition: all 0.1s ease-in-out;
+          font-size: rem-calc(14);
+          &:hover {
+            background: $light-gray;
+          }
+        }
+      }
+      ul.menu.submenu {
+        border: 2px solid $black;
+
+        li {
+          border-bottom: 1px solid $medium-gray;
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  button[data-toggle="offCanvas"] {
+    font-size: rem-calc(13);
+    position: absolute;
+    color: transparent;
+    background: none;
+    margin: 0;
+    border: none;
+    height: 100%;
+    min-height: 4vh;
+    width: rem-calc(100);
+    z-index: 12;
+    right: 0;
+    top: 0;
+
+    span {
+      display: block;
+      position: absolute;
+      right: 2em;
+      z-index: 5;
+      height: rem-calc(3);
+      background: $font-color-header;
+      width: rem-calc(22);
+      transition: background 0 0.3s;
+    }
+
+    span::before,
+    span::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: rem-calc(3);
+      background-color: $font-color-header;
+      content: "";
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0;
+    }
+
+    span::before {
+      top: rem-calc(7);
+      transition-property: top, transform;
+    }
+
+    span::after {
+      bottom: rem-calc(7);
+      transition-property: bottom, transform;
+    }
+  }
+  button[aria-expanded="true"] {
+    color: transparent;
+    border: none;
+
+    &:focus {
+      background: transparent;
+      border: none;
+    }
+
+    span {
+      background: transparent;
+    }
+
+    span::before,
+    span::after {
+      background: $font-color-header;
+    }
+
+    span::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    span::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  > div:first-child {
+    width: 100%;
+  }
+  img.logo {
+    height: 6vh;
+    width: auto;
+    z-index: 100;
+    @include breakpoint(large down) {
+      margin: 0 1em;
+    }
+    @include breakpoint(large) {
+      position: absolute;
+      height: $total-header;
+      top: 0;
+      left: calc(50% - calc(#{$total-header} / 2));
+    }
+  }
+}
+
+.header__bottom {
+  height: $header-bot-h;
+  @include breakpoint(medium down) {
+    display: none;
+  }
+  i {
+    color: $white;
+    margin-right: rem-calc(15);
+
+    &:hover {
+      color: $orange;
+    }
+  }
+  li {
+    display: inline-block;
+    margin-left: rem-calc(10);
+    a {
+      color: $white;
+      font-weight: bold;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+  div,
+  ul,
+  nav {
+    height: 100%;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(50%);
+  span {
+    margin: 0;
+
+    align-self: center;
+  }
+  button {
+    margin: 0;
+  }
+
+  a {
+    position: relative;
+    img {
+      height: $header-top-h;
+      width: auto;
+      margin-right: rem-calc(10);
+      @include breakpoint(large down) {
+        height: rem-calc(50);
+      }
+    }
+  }
+}
+
+.service-nav__mobile-menu {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-panel {
+  height: 100%;
+  background: $banner-color;
+
+  @include breakpoint(medium only) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  @include breakpoint(small only) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+
+    .top-links {
+      margin-top: auto;
+    }
+    .bottom-links {
+      margin: 0;
+    }
+  }
+  .mobile-nav {
+    @include breakpoint(medium down) {
+      .is-drilldown {
+        max-width: none !important;
+      }
+    }
+    .nav-headline {
+      font-size: rem-calc(20);
+    }
+
+    .drilldown {
+      li {
+        display: block;
+        color: $blue;
+        font-weight: bold;
+        border-bottom: 1px solid $menu-border-color;
+
+        a {
+          position: relative;
+          display: block;
+          color: inherit;
+          padding: rem-calc(24 20);
+          background: #437e8f;
+          color: $white;
+        }
+
+        .forward {
+          display: block;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          width: rem-calc(70);
+          height: 100%;
+          border: none;
+          background: transparent;
+          margin: 0;
+
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+
+            transform: rotate(45deg) translate(-50%, -50%);
+            width: rem-calc(10);
+            height: rem-calc(10);
+            border: solid $white;
+            border-width: 2px 2px 0 0;
+            margin-left: -6px;
+            margin-top: 2px;
+          }
+        }
+
+        &.js-drilldown-back {
+          .label {
+            width: rem-calc(50);
+            height: rem-calc(4);
+            margin: rem-calc(20 0 10 0);
+          }
+
+          border-top: 1px solid $white;
+          a {
+            position: relative;
+            display: block;
+            color: inherit;
+            padding: 1.5rem 2.5rem;
+            background: $blue;
+            color: #fefefe;
+            font-weight: normal;
+
+            &:before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 5%;
+              width: rem-calc(10);
+              height: rem-calc(10);
+              border: solid $white;
+              border-width: 2px 2px 0 0;
+              transform: rotate(-135deg);
+              margin-top: -6px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.drilldown .is-drilldown-submenu-parent > a:after {
+  border-color: transparent transparent transparent $white;
+}
+
+ul.submenu.js-dropdown-active {
+  /*   display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  
+
+  right: 0; */
+  background: none;
+  border: none;
+  li {
+    background: $black;
+    color: $white;
+    a {
+      color: $white;
+    }
+  }
+}
+
+.top-links {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: rem-calc(15);
+  padding-right: rem-calc(15);
+
+  @include breakpoint(small only) {
+    i {
+      margin-right: rem-calc(10);
+
+      color: $white;
+      text-shadow: 1px 1px 0px $black;
+    }
+  }
+  a {
+    padding: rem-calc(24 0);
+    color: $white;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 0px $black;
+  }
+
+  @include breakpoint(medium only) {
+    border-top: 1px solid $medium-gray;
+    margin-top: auto;
+
+    i {
+      margin-right: rem-calc(10);
+    }
+    a {
+      width: 100%;
+      height: rem-calc(40);
+      margin: rem-calc(10 0);
+      font-size: rem-calc(15);
+      border-right: 1px solid $medium-gray;
+    }
+  }
+
+  background: $header-banner;
+}
+
+.bottom-links {
+  margin: 0;
+  a.button {
+    margin: 0;
+    width: 100%;
+
+    font-size: rem-calc(15);
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: rem-calc(20);
+    align-items: center;
+
+    i {
+      color: fill;
+      margin-right: rem-calc(10);
+      margin-left: rem-calc(-10);
+      margin-top: rem-calc(3);
+    }
+
+    &:first-child {
+      background: #3b5998;
+    }
+    &:last-child {
+      background: linear-gradient(25deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    }
+  }
+
+  a:last-child {
+    background: $medium-gray;
+  }
+}
+
+div.off-canvas {
+  max-height: calc(100% - 8vh);
+  bottom: 0;
+  top: auto;
+}
+
+.js-off-canvas-overlay {
+  max-height: calc(100% - #{$header-top-h});
+  bottom: 0;
+  top: auto;
+}
+
+.off-canvas-content.-transition-overlap {
+  pointer-events: none;
+}

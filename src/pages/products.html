@@ -1,0 +1,130 @@
+<template class="item-temp">
+  <div class="cell catalogue-item">
+    <div class="container grid-x grid-margin-x">
+      <div class="cell medium-3">
+
+        <img class="" src="" alt="" />
+
+      </div>
+      <div class="cell medium-5 description">
+        <h4 class="h5"></h4>
+        <p></p>
+      </div>
+      
+      <div class="cell medium-2 specs">
+        
+        
+        <p class="type"></p>
+        <p class="gear"></p>
+        <p class="date"></p>
+ 
+
+      </div>
+      <div class="cell medium-2">
+        <p class=" price h5">Pris: 329</p>
+
+        <a class="button reserve">Reserver</a>
+      </div>
+
+
+    </div>
+  </div>
+</template>
+
+<section id="products-intro">
+  <button class="button filter-button hide-for-large" type="button" data-toggle="offCanvas-filter">Filtrer<i
+      class="fas fa-sliders-h"></i></button>
+  <div class="off-canvas-wrapper hide-for-large">
+    <div class="off-canvas position-left" id="offCanvas-filter" data-off-canvas>
+      <!-- Your menu or Off-canvas content goes here -->
+
+
+      <p class="listcounter">Viser <span></span> </p>
+      <div class="grid-x grid-margin-x grid-padding-x grid-padding-y button-container">
+        <div class="cell filters">
+          <div class="headline">Filtrer</div>
+          
+          <span class="button filter selected" data-action="filter" data-filter="*">Vis alle</span>
+          <span class="button filter" data-action="filter" data-filter="Racercykel">Racercykler</span>
+          <span class="button filter" data-action="filter" data-filter="Herrecykel">Herrecykler</span>
+          <span class="button filter" data-action="filter" data-filter="Damecykel">Damecykler</span>
+          <span class="button filter" data-action="filter" data-filter="Special">Specials</span>
+        </div>
+        <div class="cell sorting">
+          <div class="headline">Sorter</div>
+
+          <span class="button sort" data-action="sort" data-direction="desc" data-sort="date">Nyeste først</span>
+          <span class="button sort" data-action="sort" data-direction="asc" data-sort="date">Ældste Først</span>
+          <span class="button sort" data-action="sort" data-direction="desc" data-sort="price">Pris: Høj
+            først</span>
+          <span class="button sort" data-action="sort" data-direction="asc" data-sort="price">Pris: Lav først</span>
+        </div>
+        <!-- 
+        <button class="button close expanded hide-for-large" data-toggle="filters">Luk filter</button> -->
+      </div>
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+      <!-- Your page content lives here -->
+    </div>
+  </div>
+
+
+  
+  <div id="popUp" class="overlay">
+    <div class="popup">
+      
+      <p class="text-center">Hav venligst serienummer klar ved reservering.</p>
+<h3 class="h2 text-center">Hvordan ønsker du at reservere?</h3>
+
+      <a class="close" href="#">&times;</a>
+      <div class="content">
+        <div class="container">
+
+          <button class="button expanded">Reserver via tlf.</button><button class="button  expanded">Reserver via mail</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="catalogue">
+    <div class="component">
+      <div class="grid-container grid-container--wide">
+        <div class="grid-x">
+          <div class="cell large-2 sidebar">
+            <div class="grid-x show-for-large button-container">
+
+             <p class="desktop listcount">Viser:  <span></span>  </p>
+              <div class="cell filters">
+                <div class="headline"></div>
+                
+                <span class="button filter selected" data-action="filter" data-filter="*">Vis alle</span>
+                <span class="button filter" data-action="filter" data-filter="Racercykel">Racercykler</span>
+                <span class="button filter" data-action="filter" data-filter="Herrecykel">Herrecykler</span>
+                <span class="button filter" data-action="filter" data-filter="Damecykel">Damecykler</span>
+                <span class="button filter" data-action="filter" data-filter="Special">Specials</span>
+              </div>
+              <div class="cell sorting">
+                <div class="headline"></div>
+
+                <span class="button sort" data-action="sort" data-direction="desc" data-sort="date">Dato: Nyeste
+                  først</span>
+                <span class="button sort" data-action="sort" data-direction="asc" data-sort="date">Dato: Ældste
+                  Først</span>
+                <span class="button sort" data-action="sort" data-direction="desc" data-sort="price">Pris: Høj
+                  til lav</span>
+                <span class="button sort" data-action="sort" data-direction="asc" data-sort="price">Pris: Lav
+                  til høj</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="cell large-10 large-offset-2
+          ">
+            <div id="product-grid" class="grid-x"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</section>

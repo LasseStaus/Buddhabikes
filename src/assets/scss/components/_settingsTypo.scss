@@ -1,0 +1,60 @@
+@import "mixins";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li,
+span,
+br,
+p {
+  color: $black;
+}
+
+ul,
+li,
+form,
+label,
+select {
+  margin: 0;
+}
+
+footer {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  ul,
+  li,
+  span,
+  br,
+  p {
+    color: $footer-text-color;
+  }
+}
+
+h1 {
+}
+
+ul,
+li,
+a {
+  list-style: none;
+}
+
+#tp {
+  padding-top: rem-calc(80);
+  padding-bottom: rem-calc(90);
+}
+
+#products-intro {
+  h1:first-child {
+    margin-bottom: 0;
+  }
+}

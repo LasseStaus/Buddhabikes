@@ -1,0 +1,98 @@
+@mixin specialButton {
+  font-size: rem-calc(30);
+  font-weight: bold;
+  padding: rem-calc(20 30);
+  background: $banner-color;
+  border: 8px groove $light-gray;
+  color: $white;
+  text-shadow: 3px 3px 0 $black;
+  margin: 0;
+  border-radius: 5px;
+  border: none;
+  border-top: 2px solid $white;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+  i {
+    color: $white;
+    transition: all 0.3s ease-in-out;
+    right: 15%;
+    margin-top: rem-calc(3);
+    position: absolute;
+  }
+
+  &:hover {
+    background: none;
+    color: $white;
+    border: none;
+    border-top: 2px solid $orange;
+    filter: contrast(200%);
+    i {
+      color: $white;
+      right: 0;
+      filter: contrast(200%);
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: rem-calc(20);
+    background: $orange;
+    transition: width 0.3s;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin redHeader {
+  font-weight: bold;
+  color: $red;
+  border-bottom: 1px solid $red;
+  margin-bottom: rem-calc(30);
+  @include breakpoint(large up) {
+    margin-bottom: rem-calc(50);
+  }
+}
+
+@mixin buttonPalle {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  box-shadow: 3px 5px 0px rgba(0, 0, 0, 0.2);
+  a {
+    position: relative;
+    transition: all 0.25s ease-Out;
+    width: 100%;
+  }
+
+  .circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+
+    border-radius: 50%;
+    background: $orange;
+    position: absolute;
+    transition: all 0.35s ease-Out;
+    top: 50%;
+    left: 50%;
+  }
+
+  &:hover .circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+  }
+
+  &:hover a {
+    color: $white;
+  }
+}

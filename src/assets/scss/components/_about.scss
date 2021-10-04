@@ -1,0 +1,223 @@
+@import "mixins";
+
+#landing-about,
+#landing-service {
+  img {
+    width: 25vh;
+    height: auto;
+  }
+  .bg-cloud {
+    background-image: url("../img/icons/garanti1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 23vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay-about {
+    background: rgba(0, 0, 0, 0.541);
+    height: 100%;
+    width: 100%;
+    min-height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-weight: bold;
+  }
+  .label-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    .label {
+      position: absolute;
+      top: -130px;
+      right: -60px;
+      width: 130px;
+      height: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: $orange;
+      p {
+        width: 60%;
+        color: $white;
+        margin: 0;
+      }
+    }
+    a {
+      align-self: baseline;
+      color: $orange;
+      margin-top: rem-calc(10);
+      font-weight: bold;
+    }
+  }
+  .button {
+    background: $white;
+    color: $orange;
+    border-radius: 10px;
+    border: 1px solid $blue;
+    @include buttonPalle;
+    font-weight: bold;
+
+    /*   &:hover {
+      color: $orange;
+      text-shadow: 1px 1px 0px black;
+    } */
+  }
+  p {
+    color: $white;
+  }
+}
+
+#landing-about {
+  background-image: url("../img/frontpage/bgBike.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  .bg-cloud {
+    background-image: url("../img/icons/about.png");
+  }
+}
+#partners {
+  .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  img {
+    align-self: center;
+    max-height: 100px;
+    min-height: 100px;
+
+    @include breakpoint(medium down) {
+      max-height: auto;
+      min-height: auto;
+      height: 50px;
+      width: auto;
+      margin-bottom: rem-calc(10);
+    }
+  }
+  a,
+  p {
+    text-align: left;
+  }
+  a {
+    color: $blue;
+  }
+}
+
+#bike-source,
+#employees,
+#job,
+#internship-and-job,
+#socialeco,
+#partners,
+#service-intro {
+  h2.h1 {
+    font-weight: bold;
+    @include redHeader;
+  }
+
+  h3.h2 {
+    font-weight: bold;
+    color: $blue;
+  }
+}
+#bike-source {
+  min-height: auto;
+
+  span.h4 {
+    font-weight: bold;
+  }
+  .image-container {
+    position: relative;
+
+    min-height: 400px;
+    img {
+      width: auto;
+
+      z-index: 1;
+      &:first-child {
+        top: 0;
+        right: 0;
+      }
+      &:nth-child(2) {
+        right: 20%;
+        top: 20%;
+      }
+      &:nth-child(3) {
+        left: 0;
+        bottom: 0;
+      }
+      &:hover {
+        z-index: 3;
+      }
+    }
+  }
+}
+
+img.icon-img {
+  max-height: 300px;
+  margin-bottom: rem-calc(40);
+
+  &.guide {
+    max-height: 120px;
+    margin: 0;
+
+    @include breakpoint(large up) {
+      max-height: 200px;
+    }
+  }
+}
+
+#employees {
+  .cell {
+    position: relative;
+  }
+  img {
+    position: relative;
+  }
+  img.onway {
+    &:after {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      content: "xasdasd";
+      top: 0;
+      left: 50%;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+    }
+  }
+}
+
+#job {
+  img {
+    width: 100%;
+  }
+  .form-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
